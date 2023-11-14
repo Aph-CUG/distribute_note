@@ -14,6 +14,6 @@ public class StockController {
 
     @GetMapping("/stock/deductStock/{goodsId}/{count}")
     public String deductStock(@PathVariable Long goodsId,@PathVariable Integer count) {
-        return stockService.deductStockRedisLock(goodsId,count);
+        return stockService.deductStockRedisRedisson(goodsId,count);
     }
 }
